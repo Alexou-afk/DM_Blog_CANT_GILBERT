@@ -95,7 +95,7 @@ if(isset($_GET['NumAgence']) && !empty($_GET['NumAgence'])){
                 <form method="post">
                 <div class="form-group">
                         <label for="NumAgence">NumAgence</label>
-                        <input type="number" id="NumAgence" name="NumAgence" class="form-control" value="<?= $CodeService['NumAgence']?>">
+                        <input type="number" id="NumAgence" name="NumAgence" class="form-control" value="<?= $NumAgence['NumAgence']?>">
                     </div>
                     <div class="form-group">
                         <label for="CodeService">CodeService</label>
@@ -103,14 +103,14 @@ if(isset($_GET['NumAgence']) && !empty($_GET['NumAgence'])){
                     </div>
                     <div class="form-group">
                         <label for="NumSalarie">NumSalarie</label>
-                        <input type="number" id="NumSalarie" name="NumSalarie" class="form-control"value="<?= $CodeService['NumSalarie']?>">
+                        <input type="number" id="NumSalarie" name="NumSalarie" class="form-control"value="<?= $NumSalarie['NumSalarie']?>">
                 
                     </div>
                     <div class="form-group">
                         <label for="NomService">NomService</label>
-                        <input type="text" id="NomService" name="NomService" class="form-control"value="<?= $CodeService['NomService']?>">
+                        <input type="text" id="NomService" name="NomService" class="form-control"value="<?= $NomSalarie['NomService']?>">
                     </div>
-                    <input type="hidden" value="<?= $CodeService['NumAgence']?>" name="NumAgence">
+                    <input type="hidden" value="<?= $NumAgence['NumAgence']?>" name="NumAgence">
                     <button class="btn btn-primary">Envoyer</button>
                 </form>
             </section>
