@@ -3,23 +3,26 @@
 session_start();
 
 if($_POST){
-    if(isset($_POST['CodeService']) && !empty($_POST['CodeService'])
+    if(isset($_POST['NumAgence']) && !empty($_POST['NumAgence'])
+    && isset($_POST['CodeService']) && !empty($_POST['CodeService'])
     && isset($_POST['NumSalarie']) && !empty($_POST['NumSalarie'])
     && isset($_POST['NomService']) && !empty($_POST['NomService'])){
         // on inclut la connexion à la base
         require_once('connect.php');
 
         // On nettoie les données envoyées
+        $NumAgence = strip_tags($_POST['NumAgence']);
         $CodeService = strip_tags($_POST['CodeService']);
         $NumSalarie = strip_tags($_POST['NumSalarie']);
         $NomService = strip_tags($_POST['NomService']);
 
-        $sql = 'INSERT INTO `service` (`CodeService`, `NumSalarie`, `NomService`) VALUES (:CodeService, :NumSalarie, :NomService);';
+        $sql = 'INSERT INTO `service` (`NumAgence`, `CodeService`, `NumSalarie`, `NomService`) VALUES (:NumAgence, :CodeService, :NumSalarie, :NomService);';
 
         $query = $db->prepare($sql);
 
+        $query->bindValue(':NumAgence', $NumAgence, PDO::PARAM_INT);
         $query->bindValue(':CodeService', $CodeService, PDO::PARAM_INT);
-        $query->bindValue(':NumSalarie', $NumSalarie, PDO::PARAM_INT);
+        $query->bindValue(':NumSalarie', $NumSalarie, PDO::PARAM_INIT);
         $query->bindValue(':NomService', $NomService, PDO::PARAM_STR);
 
         $query->execute();
@@ -60,13 +63,17 @@ if($_POST){
                 <h1>ajouter un service</h1>
                 <form method="post">
                     <div class="form-group">
+                        <label for="NumAgence">NumAgence</label>
+                        <input type="number" id="NumAgence" name="NumAgence" class="form-control">
+                    </div>
+                    <div class="form-group">
                         <label for="CodeService">CodeService</label>
                         <input type="number" id="CodeService" name="CodeService" class="form-control">
+                
                     </div>
                     <div class="form-group">
                         <label for="NumSalarie">NumSalarie</label>
                         <input type="number" id="NumSalarie" name="NumSalarie" class="form-control">
-                
                     </div>
                     <div class="form-group">
                         <label for="NomService">NomService</label>
