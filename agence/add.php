@@ -22,7 +22,7 @@ if($_POST){
 
         $query->bindValue(':NumAgence', $NumAgence, PDO::PARAM_INT);
         $query->bindValue(':CodeService', $CodeService, PDO::PARAM_INT);
-        $query->bindValue(':NumSalarie', $NumSalarie, PDO::PARAM_INIT);
+        $query->bindValue(':NumSalarie', $NumSalarie, PDO::PARAM_STR);
         $query->bindValue(':NomService', $NomService, PDO::PARAM_STR);
 
         $query->execute();
