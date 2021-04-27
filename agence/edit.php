@@ -108,7 +108,7 @@ if(isset($_GET['NumAgence']) && !empty($_GET['NumAgence'])){
                     </div>
                     <div class="form-group">
                         <label for="NomService">NomService</label>
-                        <input type="text" id="NomService" name="NomService" class="form-control"value="<?= $NomSalarie['NomService']?>">
+                        <input type="text" id="NomService" name="NomService" class="form-control"value="<?= $NomService['NomService']?>">
                     </div>
                     <input type="hidden" value="<?= $NumAgence['NumAgence']?>" name="NumAgence">
                     <button class="btn btn-primary">Envoyer</button>

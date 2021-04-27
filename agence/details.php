@@ -46,11 +46,11 @@ if(isset($_GET['NumAgence']) && !empty($_GET['NumAgence'])){
         <div class="row">
             <section class="col-12">
                 <h1>Détails du service <?= $CodeService['CodeService'] ?></h1>
-                <p>NumAgence : <?= $CodeService['NumAgence'] ?></p>
+                <p>NumAgence : <?= $NumAgence['NumAgence'] ?></p>
                 <p>CodeService : <?= $CodeService['CodeService'] ?></p>
-                <p>NumSalarie : <?= $CodeService['NumSalarie'] ?></p>
-                <p>NomService : <?= $CodeService['NomService'] ?></p>
-                <p><a href="index.php">Retour</a> <a href="edit.php?id=<?= $CodeService['NumAgence'] ?>">Modifier</a></p>
+                <p>NumSalarie : <?= $NumSalarie['NumSalarie'] ?></p>
+                <p>NomService : <?= $NomService['NomService'] ?></p>
+                <p><a href="index.php">Retour</a> <a href="edit.php?id=<?= $NumAgence['NumAgence'] ?>">Modifier</a></p>
             </section>
         </div>
     </main>

@@ -119,38 +119,38 @@ if(isset($_GET['NumSalarie']) && !empty($_GET['NumSalarie'])){
                     </div>
                     <div class="form-group">
                         <label for="NumAgence">NumAgence</label>
-                        <input type="number" id="NumAgence" name="NumAgence" class="form-control"value="<?= $CodeService['NumAgence']?>">
+                        <input type="number" id="NumAgence" name="NumAgence" class="form-control"value="<?= $NumAgence['NumAgence']?>">
                 
                     </div>
                     <div class="form-group">
                         <label for="NomSalarie">NomSalarie</label>
-                        <input type="text" id="NomSalarie" name="NomSalarie" class="form-control"value="<?= $CodeService['NomSalarie']?>">
+                        <input type="text" id="NomSalarie" name="NomSalarie" class="form-control"value="<?= $NomSalarie['NomSalarie']?>">
                     </div>
                     <div class="form-group">
                         <label for="PrenomSalarie">PrenomSalarie</label>
-                        <input type="text" id="PrenomSalarie" name="PrenomSalarie" class="form-control"value="<?= $CodeService['PrenomSalarie']?>">
+                        <input type="text" id="PrenomSalarie" name="PrenomSalarie" class="form-control"value="<?= $PrenomSalarie['PrenomSalarie']?>">
                     </div>
                     <div class="form-group">
                         <label for="AdrSalarie">AdrSalarie</label>
-                        <input type="text" id="AdrSalarie" name="AdrSalarie" class="form-control"value="<?= $CodeService['AdrSalarie']?>">
+                        <input type="text" id="AdrSalarie" name="AdrSalarie" class="form-control"value="<?= $AdrSalarie['AdrSalarie']?>">
                     </div>
                     <div class="form-group">
                         <label for="CpSalarie">CpSalarie</label>
-                        <input type="text" id="CpSalarie" name="CpSalarie" class="form-control"value="<?= $CodeService['CpSalarie']?>">
+                        <input type="text" id="CpSalarie" name="CpSalarie" class="form-control"value="<?= $CpSalarie['CpSalarie']?>">
                     </div>
                     <div class="form-group">
                         <label for="VilleSalarie">VilleSalarie</label>
-                        <input type="text" id="VilleSalarie" name="VilleSalarie" class="form-control"value="<?= $CodeService['VilleSalarie']?>">
+                        <input type="text" id="VilleSalarie" name="VilleSalarie" class="form-control"value="<?= $VilleSalaire['VilleSalarie']?>">
                     </div>
                     <div class="form-group">
                         <label for="TelSalarie">TelSalarie</label>
-                        <input type="text" id="TelSalarie" name="TelSalarie" class="form-control"value="<?= $CodeService['TelSalarie']?>">
+                        <input type="text" id="TelSalarie" name="TelSalarie" class="form-control"value="<?= $TelSalarie['TelSalarie']?>">
                     </div>
                     <div class="form-group">
                         <label for="MailSalarie">MailSalarie</label>
-                        <input type="text" id="MailSalarie" name="MailSalarie" class="form-control"value="<?= $CodeService['MailSalarie']?>">
+                        <input type="text" id="MailSalarie" name="MailSalarie" class="form-control"value="<?= $MailSalarie['MailSalarie']?>">
                     </div>
-                    <input type="hidden" value="<?= $CodeService['NumSalarie']?>" name="NumSalarie">
+                    <input type="hidden" value="<?= $NumSalarie['NumSalarie']?>" name="NumSalarie">
                     <button class="btn btn-primary">Envoyer</button>
                 </form>
             </section>

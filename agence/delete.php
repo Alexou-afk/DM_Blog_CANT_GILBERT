@@ -9,8 +9,8 @@ if(isset($_GET['NumAgence']) && !empty($_GET['NumAgence'])){
     // On nettoie le numéro d'agence envoyé
     $NumAgence = strip_tags($_GET['NumAgence']);
 
-    $sql = 'SELECT * FROM `Agence` WHERE `NumAgence` = :NumAgence;'; 
-    // and `CodeService` = :CodeService;';
+    $sql = 'SELECT * FROM `Agence` WHERE `NumAgence` = :NumAgence; AND `CodeService` = :CodeService;';
+
 
     //On prépare la requête
     $query = $db->prepare($sql);
@@ -31,7 +31,7 @@ if(isset($_GET['NumAgence']) && !empty($_GET['NumAgence'])){
         die();
     }
 
-    $sql = 'DELETE FROM `Service` WHERE `NumAgence` = :NumAgence;'; //AND `CodeService` = :CodeService;';
+    $sql = 'DELETE FROM `Service` WHERE `NumAgence` = :NumAgence; AND `CodeService` = :CodeService;';
 
     // On prépare la requête
     $query = $db->prepare($sql);
